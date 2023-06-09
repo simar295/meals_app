@@ -8,11 +8,13 @@ import 'package:mealsapp/mealscreen.dart';
 class categoryscreen extends StatelessWidget {
   categoryscreen({super.key});
 
-  void selectedcategory(BuildContext context/*for  navigator*/,categoryclass cat) {
+  void selectedcategory(
+      BuildContext context /*for  navigator*/, categoryclass cat) {
     ////////////////////////////////////////////////////////////////////////////
     final filteredlist = dummyMeals
         .where((element) => element.categories.contains(cat.id))
         .toList();
+    //dummymeals waali list me where categories(type) contains categoryclass ki id
     ////////////////////////////////////////////////////////////////////////////
     Navigator.push(
       context,
