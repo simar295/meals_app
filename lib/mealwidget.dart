@@ -4,9 +4,13 @@ import 'package:mealsapp/mealclass.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class mealwidget extends StatelessWidget {
-  const mealwidget({super.key, required this.mealclasstitles});
+  const mealwidget(
+      {super.key,
+      required this.mealclasstitles,
+      required this.onselectedmealfunction});
 
   final mealclass mealclasstitles;
+  final void Function(mealclass mealclasstitles) onselectedmealfunction;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +20,9 @@ class mealwidget extends StatelessWidget {
       margin: EdgeInsets.all(8),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          onselectedmealfunction(mealclasstitles);
+        },
         child: Stack(
           children: [
             FadeInImage(
@@ -50,7 +56,7 @@ class mealwidget extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                   const SizedBox(
                       height: 12,
                     ),
                     Row(
@@ -101,7 +107,7 @@ class mealwidget extends StatelessWidget {
                         ),
                         Text(
                           '${mealclasstitles.affordability.name} ',
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                         const SizedBox(
                           width: 20,
