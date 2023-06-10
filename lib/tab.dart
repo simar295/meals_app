@@ -27,13 +27,27 @@ class tabstate extends State<tab> {
     setState(() {
       if (isexisting) {
         favoritemeals.remove(getmeal);
+        showmessage("meal removed");
       } else {
         favoritemeals.add(getmeal);
+        showmessage("meal added");
       }
     });
   }
 
 ////////////////////////////////////////////////////////
+
+  void showmessage(String getmessage) {
+    ScaffoldMessenger.of(context).clearSnackBars();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        duration: Duration(milliseconds: 1000),
+        content: Text(getmessage),
+      ),
+    );
+  }
+
+/////////////////////////////////////////////////
   Widget build(BuildContext context) {
     Widget activescreen = categoryscreen(
       ontogglefavoritescatscreen: togglemealfavorite,
