@@ -5,18 +5,28 @@ import 'package:mealsapp/main.dart';
 import 'package:mealsapp/mealclass.dart';
 
 class detailscreen extends StatelessWidget {
-  const detailscreen({super.key, required this.getdetailclasses});
+  const detailscreen(
+      {super.key,
+      required this.getdetailclasses,
+      required this.ontogglefavorites});
 
   final mealclass getdetailclasses;
+  final void Function(mealclass getmeals) ontogglefavorites;
 
   @override
   Widget build(BuildContext context) {
+    bool isSelected = true;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(getdetailclasses.title),
         actions: [
           IconButton(
-            onPressed: () {},
+            isSelected: isSelected,
+            selectedIcon: Icon(Icons.star),
+            onPressed: () {
+              ontogglefavorites(getdetailclasses);
+            },
             icon: Icon(Icons.star_border),
           ),
           SizedBox(

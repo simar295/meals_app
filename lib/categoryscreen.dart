@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:mealsapp/categoryclass.dart';
 import 'package:mealsapp/categorywidget.dart';
 import 'package:mealsapp/dummy_data.dart';
+import 'package:mealsapp/mealclass.dart';
 import 'package:mealsapp/mealscreen.dart';
 
 class categoryscreen extends StatelessWidget {
-  categoryscreen({super.key});
+  categoryscreen({super.key, required this.ontogglefavoritescatscreen});
+
+  final void Function(mealclass getmeals) ontogglefavoritescatscreen;
 
   void selectedcategory(
       BuildContext context /*for  navigator*/, categoryclass cat) {
@@ -19,8 +22,10 @@ class categoryscreen extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (ctx) =>
-            mealscreen(getitle: cat.title, getmeals: filteredlist),
+        builder: (ctx) => mealscreen(
+            getitle: cat.title,
+            getmeals: filteredlist,
+            ontogglefavoritesmealscreen: ontogglefavoritescatscreen),
       ),
     );
   }
