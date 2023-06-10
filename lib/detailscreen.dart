@@ -14,6 +14,15 @@ class detailscreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(getdetailclasses.title),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.star_border),
+          ),
+          SizedBox(
+            width: 6,
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -43,7 +52,7 @@ class detailscreen extends StatelessWidget {
             const SizedBox(
               height: 14,
             ),
-            Text("Receipe",
+            const Text("Receipe",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,

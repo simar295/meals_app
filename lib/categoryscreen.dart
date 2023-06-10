@@ -27,9 +27,9 @@ class categoryscreen extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*  appBar: AppBar(
         title: Text("pick your meal"),
-      ),
+      ), */
       body: GridView(
         padding: EdgeInsets.all(24),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
