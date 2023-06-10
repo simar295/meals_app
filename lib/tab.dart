@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mealsapp/categoryscreen.dart';
+import 'package:mealsapp/drawerwidget.dart';
 import 'package:mealsapp/mealclass.dart';
 import 'package:mealsapp/mealscreen.dart';
 
@@ -48,6 +49,14 @@ class tabstate extends State<tab> {
   }
 
 /////////////////////////////////////////////////
+
+  void setscreen(String identifier) {
+    if (identifier == "filters") {
+    } else {
+      Navigator.of(context).pop();
+    }
+  }
+
   Widget build(BuildContext context) {
     Widget activescreen = categoryscreen(
       ontogglefavoritescatscreen: togglemealfavorite,
@@ -65,6 +74,7 @@ class tabstate extends State<tab> {
       appBar: AppBar(
         title: Text(activetitle),
       ),
+      drawer: drawerwidget(onselectfromdrawer: setscreen),
       body: activescreen,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedpageindex,
