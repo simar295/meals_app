@@ -41,7 +41,7 @@ class mealwidget extends StatelessWidget {
               left: 0,
               right: 0,
               child: Container(
-                color: Colors.black,
+                color: Color.fromARGB(255, 0, 0, 0),
                 child: Column(
                   children: [
                     Text(
@@ -56,7 +56,7 @@ class mealwidget extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
-                   const SizedBox(
+                    const SizedBox(
                       height: 12,
                     ),
                     Row(
