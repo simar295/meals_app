@@ -7,6 +7,7 @@ import 'package:mealsapp/mealclass.dart';
 import 'package:mealsapp/mealscreen.dart';
 
 class categoryscreen extends StatelessWidget {
+
   categoryscreen(
       {super.key,
       required this.ontogglefavoritescatscreen,
@@ -34,6 +35,7 @@ class categoryscreen extends StatelessWidget {
       ),
     );
   }
+
 
   Widget build(BuildContext context) {
     return Scaffold(
