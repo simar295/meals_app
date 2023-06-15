@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mealsapp/categoryscreen.dart';
 import 'package:mealsapp/tab.dart';
 
 final theme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
     brightness: Brightness.dark,
-    seedColor: Color.fromARGB(255, 25, 243, 5),
+    seedColor: const Color.fromARGB(255, 25, 243, 5),
   ),
   textTheme: GoogleFonts.poppinsTextTheme(),
 );
@@ -24,7 +23,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: tab(),
+      home: const tab(),
     );
   }
 }

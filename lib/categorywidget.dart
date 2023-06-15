@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/widgets.dart';
 import 'categoryclass.dart';
 
 class categorygrid extends StatelessWidget {
@@ -20,9 +17,9 @@ class categorygrid extends StatelessWidget {
       onTap: getselectedcategoryfunction,
       splashColor: Theme.of(context).primaryColor,
       child: Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
           gradient: LinearGradient(
             colors: [
               categoryclasstitle.color.withOpacity(0.55),

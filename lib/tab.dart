@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:mealsapp/categoryscreen.dart';
 import 'package:mealsapp/drawerwidget.dart';
 import 'package:mealsapp/dummy_data.dart';
@@ -15,6 +14,8 @@ const initalfilters = {
 };
 
 class tab extends StatefulWidget {
+  const tab({super.key});
+
   @override
   State<tab> createState() {
     return tabstate();
@@ -51,7 +52,7 @@ class tabstate extends State<tab> {
     ScaffoldMessenger.of(context).clearSnackBars();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        duration: Duration(milliseconds: 1000),
+        duration: const Duration(milliseconds: 1000),
         content: Text(getmessage),
       ),
     );
@@ -82,6 +83,7 @@ class tabstate extends State<tab> {
 
 ////////////////////////////////////////////////////////////
 
+  @override
   Widget build(BuildContext context) {
     final availablefilters = dummyMeals.where((element) {
       if (selectedfilters[filters.glutenfree]! &&
@@ -121,7 +123,7 @@ class tabstate extends State<tab> {
       body: activescreen,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedpageindex,
-        selectedItemColor: Color.fromARGB(255, 255, 9, 103),
+        selectedItemColor: const Color.fromARGB(255, 255, 9, 103),
         /*  selectedIconTheme: IconThemeData(color: Colors.blueAccent), */
         onTap: selectedpage,
         items: const [

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 enum filters {
   glutenfree,
@@ -39,7 +37,7 @@ class _filterscreenState extends State<filterscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("apply filters"),
+        title: const Text("apply filters"),
       ),
       body: WillPopScope(
         onWillPop: () async {
@@ -60,16 +58,16 @@ class _filterscreenState extends State<filterscreen> {
                   glutenfilterstate = index;
                 });
               },
-              title: Text(
+              title: const Text(
                 "gluten free",
                 style: TextStyle(color: Colors.white),
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 "only includes gluten free meals",
                 style: TextStyle(color: Colors.white),
               ),
               activeColor: Colors.blueAccent,
-              contentPadding: EdgeInsets.only(left: 34, right: 32),
+              contentPadding: const EdgeInsets.only(left: 34, right: 32),
             ),
             SwitchListTile(
               value: lactosfilterstate,
@@ -78,16 +76,16 @@ class _filterscreenState extends State<filterscreen> {
                   lactosfilterstate = index;
                 });
               },
-              title: Text(
+              title: const Text(
                 "lactos free",
                 style: TextStyle(color: Colors.white),
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 "only includes lactos free meals",
                 style: TextStyle(color: Colors.white),
               ),
               activeColor: Colors.blueAccent,
-              contentPadding: EdgeInsets.only(left: 34, right: 32),
+              contentPadding: const EdgeInsets.only(left: 34, right: 32),
             ),
             SwitchListTile(
               value: vegfilterstate,
@@ -96,16 +94,16 @@ class _filterscreenState extends State<filterscreen> {
                   vegfilterstate = index;
                 });
               },
-              title: Text(
+              title: const Text(
                 "vegetarian ",
                 style: TextStyle(color: Colors.white),
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 "only includes vegetarian meals",
                 style: TextStyle(color: Colors.white),
               ),
               activeColor: Colors.blueAccent,
-              contentPadding: EdgeInsets.only(left: 34, right: 32),
+              contentPadding: const EdgeInsets.only(left: 34, right: 32),
             ),
             SwitchListTile(
               value: nonvegfilterstate,

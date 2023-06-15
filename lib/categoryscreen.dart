@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:mealsapp/categoryclass.dart';
 import 'package:mealsapp/categorywidget.dart';
@@ -8,7 +7,7 @@ import 'package:mealsapp/mealscreen.dart';
 
 class categoryscreen extends StatelessWidget {
 
-  categoryscreen(
+  const categoryscreen(
       {super.key,
       required this.ontogglefavoritescatscreen,
       required this.availablemeals});
@@ -37,21 +36,22 @@ class categoryscreen extends StatelessWidget {
   }
 
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       /*  appBar: AppBar(
         title: Text("pick your meal"),
       ), */
-      backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       body: Container(
-        decoration: BoxDecoration(
-            gradient: const LinearGradient(colors: [
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
           Color.fromARGB(255, 0, 0, 0),
           Color.fromARGB(255, 0, 0, 0),
           Color.fromARGB(255, 44, 44, 44)
         ], begin: Alignment.bottomCenter, end: Alignment.topCenter)),
         child: GridView(
-          padding: EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             childAspectRatio: 3 / 2,

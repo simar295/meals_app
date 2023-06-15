@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mealsapp/dummy_data.dart';
 import 'package:mealsapp/mealclass.dart';
 import 'package:transparent_image/transparent_image.dart';
 
@@ -17,7 +16,7 @@ class mealwidget extends StatelessWidget {
     return Card(
       elevation: 3,
       clipBehavior: Clip.hardEdge,
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: InkWell(
         onTap: () {
@@ -41,7 +40,7 @@ class mealwidget extends StatelessWidget {
               left: 0,
               right: 0,
               child: Container(
-                color: Color.fromARGB(255, 0, 0, 0),
+                color: const Color.fromARGB(255, 0, 0, 0),
                 child: Column(
                   children: [
                     Text(

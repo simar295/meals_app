@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:mealsapp/detailscreen.dart';
 import 'package:mealsapp/mealclass.dart';
 import 'package:mealsapp/mealwidget.dart';
@@ -51,7 +49,7 @@ class mealscreen extends StatelessWidget {
                     color: Theme.of(context).colorScheme.onBackground,
                   ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             Text(

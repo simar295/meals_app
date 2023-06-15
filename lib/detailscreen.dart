@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:mealsapp/main.dart';
 import 'package:mealsapp/mealclass.dart';
 
 class detailscreen extends StatelessWidget {
@@ -23,11 +20,11 @@ class detailscreen extends StatelessWidget {
         actions: [
           IconButton(
             isSelected: isSelected,
-            selectedIcon: Icon(Icons.star),
+            selectedIcon: const Icon(Icons.star),
             onPressed: () {
               ontogglefavorites(getdetailclasses);
             },
-            icon: Icon(Icons.star_border),
+            icon: const Icon(Icons.star_border),
           ),
           const SizedBox(
             width: 6,
@@ -46,7 +43,7 @@ class detailscreen extends StatelessWidget {
             const SizedBox(
               height: 14,
             ),
-            Text("INGREDIENTS",
+            const Text("INGREDIENTS",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
@@ -57,7 +54,7 @@ class detailscreen extends StatelessWidget {
             for (final ingredients in getdetailclasses.ingredients)
               Text(
                 ingredients,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
             const SizedBox(
               height: 14,
@@ -72,10 +69,10 @@ class detailscreen extends StatelessWidget {
             ),
             for (final steps in getdetailclasses.steps)
               Padding(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Text(
                   steps,
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                   textAlign: TextAlign.center,
                 ),
               )
