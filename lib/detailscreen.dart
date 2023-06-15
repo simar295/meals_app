@@ -29,7 +29,7 @@ class detailscreen extends StatelessWidget {
             },
             icon: Icon(Icons.star_border),
           ),
-          SizedBox(
+          const SizedBox(
             width: 6,
           )
         ],
