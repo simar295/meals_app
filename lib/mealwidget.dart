@@ -24,12 +24,15 @@ class mealwidget extends StatelessWidget {
         },
         child: Stack(
           children: [
-            FadeInImage(
-              placeholder: MemoryImage(kTransparentImage),
-              image: NetworkImage(mealclasstitles.imageUrl),
-              fit: BoxFit.cover,
-              height: 250,
-              width: double.infinity,
+            Hero(
+              tag: mealclasstitles.id,
+              child: FadeInImage(
+                placeholder: MemoryImage(kTransparentImage),
+                image: NetworkImage(mealclasstitles.imageUrl),
+                fit: BoxFit.cover,
+                height: 250,
+                width: double.infinity,
+              ),
             ),
             //networkimage is to fetch image from network
             //postioned is used with stacks to position new widgets ontop of other

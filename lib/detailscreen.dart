@@ -34,11 +34,14 @@ class detailscreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(
-              getdetailclasses.imageUrl,
-              width: double.infinity,
-              height: 300,
-              fit: BoxFit.cover,
+            Hero(
+              tag: getdetailclasses.id,
+              child: Image.network(
+                getdetailclasses.imageUrl,
+                width: double.infinity,
+                height: 300,
+                fit: BoxFit.cover,
+              ),
             ),
             const SizedBox(
               height: 14,
